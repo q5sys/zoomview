@@ -33,6 +33,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
   QComboBox *resBox = new QComboBox;
   resBox->addItems(*resolutions);
   hlayout->addWidget(resBox);
+  //set default resolution to 1080p
 
   QSpacerItem *item = new QSpacerItem(1,1, QSizePolicy::Expanding, QSizePolicy::Fixed);
   hlayout->addSpacerItem(item);
@@ -44,7 +45,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
   window->show();
 }
 
-void OpenFile::MainWindow(QString file){
+void openFile::MainWindow(QString file){
   findPath(file);
   QGraphicsPixmapItem* item = new QGraphicsPixmapItem(QPixmap::fromImage(path));
   scene->addItem(item);
@@ -58,9 +59,22 @@ QString findPath::MainWindow(QString file){
   return path;
 }
 
+void setResolution::Mainwindow(){}
+    //grab resolution from combobox when changed
+    // resize capture frame to proper aspect ratio
+
+//view->setFixedSize(width, height);
+//view->setSceneRect(0, 0, width, height);
+//view->fitInView(0, 0, width, height, Qt::KeepAspectRatio);
+
+
 void SaveFile::MainWIndow(){
 
+
+// get selected Image Resolution
 // get image inside frame and set to resolution selected in resBox;
+// File Save Dialog
+
 }
 
 

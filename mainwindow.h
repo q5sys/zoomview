@@ -13,7 +13,10 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     static QString findPath(QString file);
-    void OpenFile();
+    void openFile();
+    void setResolution();
+    void saveFile():
+
 
 private:
     Ui::MainWindow *ui;
