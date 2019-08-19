@@ -7,7 +7,8 @@ namespace Ui {
 class MainWindow;
 }
 
-class MainWindow : public QMainWindow { Q_OBJECT
+class MainWindow : public QMainWindow {
+Q_OBJECT
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
@@ -15,8 +16,7 @@ public:
     static QString findPath(QString file);
     void openFile();
     void setResolution();
-    void saveFile():
-
+    void saveFile();
 
 private:
     Ui::MainWindow *ui;

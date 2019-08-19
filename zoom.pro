@@ -15,14 +15,14 @@ TEMPLATE = app
 
 CONFIG += c++11
 
-SOURCES += \\
+SOURCES += \
         main.cpp \
         mainwindow.cpp \
         zoomgview.cpp
 
-HEADERS += \\
-        mainwindow.h \ \
-    zoomgview.h
+HEADERS += \
+        mainwindow.h \
+	zoomgview.h
 
 FORMS += \
         mainwindow.ui

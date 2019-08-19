@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
   QWidget *window = new QWidget;
   window->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
 
-  zoomGView *frame = new zoomGView(scene)
+  zoomGView *frame = new zoomGView(scene);
   frame->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
   frame->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
@@ -45,7 +45,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
   window->show();
 }
 
-void openFile::MainWindow(QString file){
+void MainWindow::openFile(QString file){
   findPath(file);
   QGraphicsPixmapItem* item = new QGraphicsPixmapItem(QPixmap::fromImage(path));
   scene->addItem(item);
@@ -53,13 +53,13 @@ void openFile::MainWindow(QString file){
 }
 
 
-QString findPath::MainWindow(QString file){
+QString MainWindow::findPath(QString file){
   if(file.startsWith("~/")){ file = file.replace("~/", QDir::homePath()+"/" ); }
   if(file.startsWith("/") || QFile::exists(file)){ return file; }
   return path;
 }
 
-void setResolution::Mainwindow(){}
+void MainWindow::setResolution::Mainwindow(){}
     //grab resolution from combobox when changed
     // resize capture frame to proper aspect ratio
 
@@ -68,7 +68,7 @@ void setResolution::Mainwindow(){}
 //view->fitInView(0, 0, width, height, Qt::KeepAspectRatio);
 
 
-void SaveFile::MainWIndow(){
+void MainWindow::saveFile(){
 
 
 // get selected Image Resolution
