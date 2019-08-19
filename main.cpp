@@ -9,7 +9,7 @@ int main(int argc, char *argv[]){
   file = argv[0];
 
   MainWindow w;
-  w.LoadArguments(file);
+  //w.LoadArguments(file);
   w.show();
 
 
